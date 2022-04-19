@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections;
+using System.Text;
 
 namespace Full_GRASP_And_SOLID.Library
 {
@@ -25,14 +26,20 @@ namespace Full_GRASP_And_SOLID.Library
             this.steps.Remove(step);
         }
 
-        public void PrintRecipe()
+        /// <summary>
+        /// Le asigno a la clase Recipe la funcion de armar el texto de la receta
+        /// por Expert, ya que es la clase que posee los conocimientos necesarios
+        /// para llevar acabo la funcion.
+        /// </summary>
+        /// <returns></returns>
+        public StringBuilder GetRecipeText()
         {
-            Console.WriteLine($"Receta de {this.FinalProduct.Description}:");
+            StringBuilder text = new StringBuilder($"Receta de {this.FinalProduct.Description}:\n");
             foreach (Step step in this.steps)
             {
-                Console.WriteLine($"{step.Quantity} de '{step.Input.Description}' " +
-                    $"usando '{step.Equipment.Description}' durante {step.Time}");
+                text.Append($"{step.Quantity} de '{step.Input.Description}' " + $"usando '{step.Equipment.Description}' durante {step.Time}\n");
             }
+            return text;
         }
     }
 }
