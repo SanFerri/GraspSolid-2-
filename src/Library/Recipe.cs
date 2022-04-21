@@ -27,9 +27,9 @@ namespace Full_GRASP_And_SOLID.Library
         }
 
         /// <summary>
-        /// Le asigno a la clase Recipe la funcion de armar el texto de la receta
+        /// Le asigno a la clase Recipe la función de armar el texto de la receta
         /// por Expert, ya que es la clase que posee los conocimientos necesarios
-        /// para llevar acabo la funcion.
+        /// para llevar acabo la función.
         /// </summary>
         /// <returns></returns>
         public StringBuilder GetRecipeText()
