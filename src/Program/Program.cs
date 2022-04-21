@@ -25,7 +25,8 @@ namespace Full_GRASP_And_SOLID
             recipe.FinalProduct = GetProduct("Café con leche");
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
-            // Aqui
+            // Aquí en vez de usar recipe.Print(), ConsolePrinter es quien se encarga de imprimir
+            // la receta.
             ConsolePrinter.Print(recipe.GetRecipeText());
         }
 
